@@ -1,4 +1,6 @@
 ﻿
+using System.Numerics;
+
 static void MassIndex()
 {
     Console.WriteLine("What's your age?");
@@ -321,7 +323,6 @@ static void FibonacciNums()
     }
     Console.ReadLine();
 }
-
 static void TenNums()
 {
     int[] numbers = new int[10];
@@ -351,3 +352,16 @@ static void TenNums()
     Console.WriteLine(average);
 
 }
+static void RecurFactorial()
+{
+    Console.WriteLine("Enter n >= 0");
+    int n = int.Parse(Console.ReadLine());
+    BigInteger factorial = 1;
+    for (int i = 1; i <= n; i++)
+    {
+        factorial *= i;
+    }
+    Console.WriteLine(factorial);
+}
+
+RecurFactorial();
