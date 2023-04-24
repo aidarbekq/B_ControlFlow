@@ -363,5 +363,30 @@ static void RecurFactorial()
     }
     Console.WriteLine(factorial);
 }
+static void Auth()
+{
+    string password = "qwerty";
+    string login = "tomgold";
 
-RecurFactorial();
+    int tries = 1;
+    while (tries <= 3) 
+    {
+        Console.WriteLine("Enter login");
+        string userLogin = Console.ReadLine();
+
+        Console.WriteLine("Enter password");
+        string userPass = Console.ReadLine();
+
+        if (userLogin == login && userPass == password)
+        {
+            Console.WriteLine("Success");
+            break;
+        }
+        tries++;
+        if (tries ==4)
+        {
+            Console.WriteLine("You exceeded the number of available tries.");
+        }
+    }
+}
+Auth();
